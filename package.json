@@ -1,0 +1,14 @@
+{
+  "name": "bookmarks_api",
+  "version": "1.0.0",
+  "description": "BookmarksAPI",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thomas Morin",
+  "license": "ISC",
+  "dependencies": {
+    "query-string": "^6.13.2"
+  }
+}
