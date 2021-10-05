@@ -46,6 +46,7 @@ class Repository {
             object.Id = this.nextId();
             this.objectsList.push(object);
             this.write();
+            console.log(object);
             return object;
         } catch(error) {
             return null;
