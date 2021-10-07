@@ -155,9 +155,19 @@ class BookmarksController extends require('./Controller') {
 
         if ('sort' in params){
             if(params.sort === "name")
-                sortList.sort((a, b) => a.Name.toLowerCase() > b.Name.toLowerCase() && 1 || -1);
+            {
+                if (params.order === "asc")
+                    sortList.sort((a, b) => a.Name.toLowerCase() > b.Name.toLowerCase() && 1 || -1);
+                else if (params.order === "desc")
+                    sortList.sort((a, b) => b.Name.toLowerCase() > a.Name.toLowerCase() && 1 || -1);
+            }
             else if (params.sort === "category")
-                sortList.sort((a, b) => b.Category.toLowerCase() > a.Category.toLowerCase() && 1 || -1);
+            {   
+                if (params.order === "asc")
+                    sortList.sort((a, b) => a.Category.toLowerCase() > b.Category.toLowerCase() && 1 || -1);
+                else if (params.order === "desc")
+                    sortList.sort((a, b) => b.Category.toLowerCase() > a.Category.toLowerCase() && 1 || -1);
+            }
         }
         return sortList;
     }
