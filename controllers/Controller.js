@@ -1,4 +1,4 @@
-const Response = require('../Response.js');
+const Response = require('../response.js');
 const queryString = require('query-string');
 /////////////////////////////////////////////////////////////////////
 // Important note about controllers:
